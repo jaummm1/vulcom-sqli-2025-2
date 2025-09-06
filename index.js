@@ -35,6 +35,7 @@ app.post('/login', (req, res) => {
         if (err) {
             return res.send('Erro no servidor');
         }
+        // No email digitei "OR 1=1 --'" e na senha "a" 
         if (rows.length > 0) {
             console.log('CONSULTA: ', query);
             console.log('RESULTADO:', rows);
